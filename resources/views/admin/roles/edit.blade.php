@@ -49,7 +49,7 @@
                         <label for="course_id" class="control-label">دوره مرتبط</label>
                         <select class="form-control" id="permission_id" name="permission_id[]" multiple>
                             @foreach($permissions as $permission)
-                                <option value="{{ $permission->id }}" {{ $role->id == $permission->id ? "selected" : "" }}>{{ $permission->name }}</option>
+                                <option value="{{ $permission->id }}" {{ in_array($permission->id , $role->permissions()->pluck('id')->toArray()) ? "selected" : "" }}>{{ $permission->name }}</option>
                             @endforeach
                         </select>
                     </div>

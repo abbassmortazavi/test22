@@ -15,8 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-//41,10
-///ddddddddd
+
 
 Route::group(['namespace'=>'Admin' , 'prefix'=>'admin'] , function (){
     $this->get('panel' , 'PanelController@index');
@@ -30,6 +29,6 @@ Route::group(['namespace'=>'Admin' , 'prefix'=>'admin'] , function (){
     $this->group([] , function (){
         $this->resource('users' , 'UserController');
     });
-//57-10
+
 
 });
