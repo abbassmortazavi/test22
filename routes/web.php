@@ -16,6 +16,7 @@ Route::get('/', function () {
 });
 
 //41,10
+///ddddddddd
 
 Route::group(['namespace'=>'Admin' , 'prefix'=>'admin'] , function (){
     $this->get('panel' , 'PanelController@index');
